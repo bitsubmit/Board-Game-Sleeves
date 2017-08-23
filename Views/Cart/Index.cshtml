@@ -1,0 +1,63 @@
+﻿@model Board_game_sleeves.ViewModel.CartIndexViewModel
+@{
+    ViewBag.Title = "Board Game Sleeves: Your Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="wrapper">
+    <div class="cart">
+        <div class="rectangle-cart">
+        <h2>Your cart</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Quantity</th>
+                        <th>Item</th>
+                        <th class="text-right">Price</th>
+                        <th class="text-right">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+                    @foreach (var line in Model.Cart.CartLines)
+                    {
+                        <tr>
+                            <td class="text-center">@line.Quantity</td>
+                            <td class="text-left">@line.Product.Name</td>
+                            <td class="text-right">@line.Product.Price.ToString("n")</td>
+                            <td class="text-right">
+                                @(  (line.Quantity * line.Product.Price).ToString("n"))
+                            </td>
+                            <td>
+
+                                @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                                {
+                                    @Html.Hidden("ProductId", line.Product.ProductId)
+                                    @Html.HiddenFor(x => x.ReturnUrl)
+                                    <input class="remove-button"
+                                           type="submit" value="Remove" />
+                                }
+
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-right">Total:</td>
+                        <td class="text-right">
+                            @Model.Cart.TotalPrice.ToString("n")
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="continue-shopping">
+                <a href="~/products">Continue shopping</a>
+            </div>
+            <div class="continue-shopping">
+                <a href="~/customers/create">Checkout</a>
+            </div>
+        </div>
+    </div>
+</div>

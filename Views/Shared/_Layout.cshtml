@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>@ViewBag.Title - Board Game Sleeves</title>  
+    <link href="~/Content/reset.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <!--<aside>-->
+        <header>
+
+            <div class="top-header">
+                <!-- <div class="products">Products</div>-->
+                <div >
+                    @*@Html.ActionLink("Board Game Sleeves", "Index", "BoardGameSleeves", new { area = "" }, new { @class = "" })*@
+                </div>
+                <div class="cart">
+                    @Html.Action("Summary", "Cart")
+                </div>
+            </div>
+        </header>
+
+
+
+        <div class="rectangle-blue">
+            <h2><a href="~/">BOARD GAME SLEEVES</a></h2>
+        </div>
+            
+
+
+            @RenderBody()
+            <!--</aside>-->
+            @*<footer class="col-12">
+                <p>&copy; @DateTime.Now.Year - Board Game Sleeves</p>
+            </footer>*@
+
+        </div>
+</body>
+</html>

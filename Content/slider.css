@@ -1,0 +1,95 @@
+﻿#reset, #scale{
+    background-color:white;
+    margin-top: 10px;
+    border: none;
+    height: 30px;
+    width: 15%;
+    text-align: center;
+}
+
+
+
+body{
+    text-align: center;
+    background-color: dimgray; 
+}
+#area{
+    background-color: black;
+    height: 158px;
+    width: 100px;
+   margin:auto;
+    border-radius:10px;
+    background-image:url("/Content/images/julijas-kredikort-tegning-fra-paint.png");
+    background-size:cover;
+   
+}
+
+#firstStep{
+    display: initial;
+}
+
+#secondStep{
+    display: none;
+}
+
+.slider { margin: 10px; }
+
+#sliderHeight{
+display: none;
+}
+.sleeve{ 
+    margin: 20px 5px 20px 5px; 
+    float: left; 
+    border: solid 1px dimgrey; 
+    padding: 4px; 
+    background: rgba(255, 255, 255, 0.3); 
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 87%, rgba(255, 255, 255, 0.3) 100%); 
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 255, 255, 0.3)), color-stop(13%, rgba(255, 255, 255, 0.3)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(87%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(255, 255, 255, 0.3))); 
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 87%, rgba(255, 255, 255, 0.3) 100%); 
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 87%, rgba(255, 255, 255, 0.3) 100%); 
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 87%, rgba(255, 255, 255, 0.3) 100%); 
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 13%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 87%, rgba(255, 255, 255, 0.3) 100%); 
+    box-shadow: 0 0 12px black;
+}
+
+
+/*slider reset*/
+
+div#sliderWidth {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+div#sliderWidth::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+div#sliderWidth:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+div#sliderWidth::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+/*/slider reset*/
+div#sliderWidth{
+    background-color:white;
+    border:none;
+    height:8px;
+
+}
+    div#sliderWidth span {
+    background:#333333;
+    border:none;
+    width:8px;
+    height:50px;
+    margin:0;
+    top:-22px;
+    }

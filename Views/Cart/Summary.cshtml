@@ -1,0 +1,12 @@
+﻿@model Board_game_sleeves.Models.Cart
+
+
+@if (Model.CartLines != null)
+{
+    <a href="~/Cart">
+        <div class="cart-summary">
+            <div class="cart-quantity"> @Model.CartLines.Sum(x => x.Quantity)</div>
+        </div>
+    </a>
+}
+

@@ -1,0 +1,617 @@
+/*Declaring Sass variables*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+/*MAIN FONT*/
+/*COLORS*/
+/*Here goes the styling... We used the Sass principle called Nesting for our styling*/
+a, body {
+  color: #333333; }
+
+/*ANCHORS*/
+a {
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  color: #333333; }
+
+a:hover {
+  text-decoration: underline; }
+
+a:visited {
+  text-decoration: none; }
+
+/*===========*/
+/*=====BUILDING A GRID WITHOUT FRAMEWORK=========*/
+* {
+  box-sizing: border-box; }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block; }
+
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+[class*="col-"] {
+  float: left;
+  /*padding: 15px;*/ }
+
+/*===================================*/
+/*==========Nesting*/
+/*===================================*/
+body {
+  font-family: "Oswald", sans-serif;
+  background-image: url("layout-images/pngs/flat-tvaer-02.png");
+  line-height: 1.5;
+  font-size: 14px; }
+  body p {
+    letter-spacing: 0.3px; }
+  body .wrapper {
+    width: 880px;
+    margin: auto; }
+    body .wrapper #top-left {
+      position: fixed;
+      top: 0;
+      left: 0; }
+    body .wrapper #top-right {
+      position: fixed;
+      top: 0;
+      right: 0; }
+    body .wrapper #bot-left {
+      position: fixed;
+      bottom: 0;
+      left: 0; }
+    body .wrapper #bot-right {
+      position: fixed;
+      bottom: 0;
+      right: 0; }
+    body .wrapper #mid-right {
+      position: fixed;
+      top: 30%;
+      right: 0; }
+    body .wrapper #mid-left {
+      position: fixed;
+      top: 40%;
+      left: 0; }
+
+h2 {
+  font-size: 30pt;
+  text-align: center;
+  line-height: 1.5;
+  padding-left: 40px;
+  padding-right: 40px; }
+
+h4 {
+  font-size: 20pt;
+  text-align: center;
+  line-height: 1.5;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px; }
+
+/*===================================*/
+/*======Ribbons part 1 starts here...*/
+/*===================================*/
+.front-page-top-text {
+  padding-top: 20px;
+  font-size: 20px;
+  margin-bottom: -12px;
+  margin-top: 25px; }
+
+.rectangle-white-text-bottom h4 {
+  font-size: 16px;
+  margin-top: 100px; }
+
+.rectangle-white {
+  width: 50%;
+  height: 300px;
+  background-color: white;
+  border: 10px solid red;
+  margin: auto;
+  min-height: 300px; }
+
+.rectangle-cart {
+  width: 50%;
+  height: 250px;
+  background-color: white;
+  border: 10px solid red;
+  margin: auto;
+  padding-top: 15px; }
+
+.rectangle-yellow {
+  width: 110%;
+  height: 70px;
+  background-color: #FBB03B;
+  float: left;
+  margin-left: -5%;
+  position: relative;
+  margin-top: 40px; }
+
+.rectangle-yellow-h2 {
+  padding-top: 13px; }
+
+.rectangle-yellow:before, .rectangle-yellow:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -0.5em;
+  border: 2.4em solid #F7931E;
+  z-index: -1; }
+
+.rectangle-yellow:before {
+  left: -3em;
+  border-right-width: 1.5em;
+  border-left-color: transparent; }
+
+.rectangle-yellow:after {
+  right: -3em;
+  border-left-width: 1.5em;
+  border-right-color: transparent; }
+
+.rectangle-yellow .rectangle-yellow-content:before, .rectangle-yellow .rectangle-yellow-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #FBB03B transparent transparent transparent;
+  bottom: -1em; }
+
+.all-sleeves-link {
+  text-decoration: underline; }
+
+/*===================================*/
+/*======Ribbons part 2 starts here...*/
+/*===================================*/
+.rectangle-blue {
+  width: 50%;
+  height: 80px;
+  background-color: #4A4F9C;
+  position: relative;
+  margin: auto;
+  margin-bottom: 27px;
+  margin-top: 20px; }
+
+.rectangle-blue h2 {
+  padding-top: 10px;
+  color: #7078ED; }
+
+.rectangle-blue a {
+  color: #7078ED; }
+
+.rectangle-blue:before, .rectangle-blue:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -0.6em;
+  border: 2.8em solid #33346E;
+  z-index: -1; }
+
+.rectangle-blue:before {
+  left: -5em;
+  border-right-width: 1.5em;
+  border-left-color: transparent;
+  width: 50px; }
+
+.rectangle-blue:after {
+  right: -5em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
+  width: 50px; }
+
+.rectangle-blue .rectangle-blue-content:before, .rectangle-blue .rectangle-yellow-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #33346E transparent transparent transparent;
+  bottom: -1em; }
+
+/*===================================*/
+/*=============Styling of elements...*/
+/*===================================*/
+.remove-button {
+  width: 100%; }
+
+.cart-summary {
+  background-image: url(images/shopping-cart-jeton-12.png);
+  width: 69px;
+  height: 68px;
+  float: right;
+  z-index: 99999;
+  top: 21px;
+  position: relative; }
+
+.cart-quantity {
+  margin: 2px 4px 0px 45px;
+  border-style: solid;
+  text-align: center;
+  background: #FF1D25; }
+
+.products {
+  position: relative; }
+
+.products img {
+  max-height: 250px; }
+
+.products p, .products h4 {
+  text-align: left; }
+
+.products h4 {
+  font-size: 18px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0; }
+
+.products input[type=submit] {
+  position: absolute;
+  top: 51%;
+  width: 110px;
+  background-color: #CC171E;
+  color: white; }
+
+.price-tag {
+  text-align: left; }
+
+table {
+  margin: auto; }
+
+.continue-shopping {
+  text-align: center; }
+
+input {
+  background-color: white;
+  margin-top: 10px;
+  border: none;
+  height: 30px;
+  font-family: "Oswald", sans-serif;
+  width: 90%; }
+
+input[type=submit] {
+  background-color: #FF1D25; }
+
+input[type=submit]:hover {
+  cursor: pointer;
+  text-decoration: underline; }
+
+.form-horizontal {
+  width: 50%;
+  background-color: white;
+  height: 947px;
+  margin: auto;
+  border: 10px solid red; }
+
+.form-horizontal input {
+  width: 24%;
+  border-style: solid;
+  float: right;
+  margin-right: 16%;
+  border-width: 1px;
+  border-color: #FF1D25; }
+
+.input-field {
+  margin-top: 25px; }
+
+.form-horizontal label {
+  margin-left: 16%; }
+
+.submit-form {
+  margin-left: -81%;
+  margin-top: 286px; }
+
+.form-horizontal .shipping-info {
+  margin-top: 281px; }
+
+/*
+-----------------------------------
+--------------Media queries goes here...
+-----------------------------------
+*/
+/*===================================*/
+/*======Smartphones...*/
+/*===================================*/
+@media (max-width: 768px) {
+  .col-3 {
+    width: 100%; }
+
+  .col-4 {
+    width: 50%; }
+
+  input {
+    width: 40% !important; }
+
+  h2 {
+    font-size: 20pt; }
+
+  h4 {
+    font-size: 20px; }
+
+  .front-page-top-text {
+    font-size: 20px; }
+
+  .rectangle-yellow {
+    height: 60px; }
+
+  .rectangle-yellow h4 {
+    font-size: 22px; }
+
+  .rectangle-yellow:before, .rectangle-yellow:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -0.5em;
+    border: 2em solid #F7931E;
+    z-index: -1; }
+
+  .rectangle-yellow:before {
+    left: -3em;
+    border-right-width: 1.5em;
+    border-left-color: transparent; }
+
+  .rectangle-yellow:after {
+    right: -3em;
+    border-left-width: 1.5em;
+    border-right-color: transparent; }
+
+  .rectangle-yellow .rectangle-yellow-content:before, .rectangle-yellow .rectangle-yellow-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #FBB03B transparent transparent transparent;
+    bottom: -1em; }
+
+  .rectangle-white-text-bottom h4 {
+    font-size: 14px; }
+
+  .rectangle-blue {
+    height: 60px; }
+
+  .rectangle-blue:before, .rectangle-blue:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -0.6em;
+    border: 2em solid #33346E;
+    z-index: -1; }
+
+  .rectangle-blue:before {
+    left: -4em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+    width: 30px; }
+
+  .rectangle-blue:after {
+    right: -4em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+    width: 30px; }
+
+  .rectangle-blue .rectangle-blue-content:before, .rectangle-blue .rectangle-yellow-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #33346E transparent transparent transparent;
+    bottom: -1em; }
+
+  .form-horizontal {
+    max-height: 800px; }
+
+  .submit-form {
+    margin-left: -39%; }
+
+  body .wrapper {
+    width: 100%; }
+    body .wrapper #mid-left, body .wrapper #bot-left, body .wrapper #top-left, body .wrapper #mid-right, body .wrapper #bot-right, body .wrapper #top-right {
+      display: none; } }
+/*===================================*/
+/*=====iPads (portrait and landscape)*/
+/*===================================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .form-horizontal {
+    max-height: 800px; }
+
+  .col-3 {
+    width: 50%; }
+
+  .col-4 {
+    width: 50%; }
+
+  body .wrapper {
+    width: 100%; }
+    body .wrapper #mid-left, body .wrapper #bot-left, body .wrapper #top-left, body .wrapper #mid-right, body .wrapper #bot-right, body .wrapper #top-right {
+      display: none; } }
+/*===================================*/
+/*=============Custom media querie...*/
+/*===================================*/
+@media (max-width: 480px) {
+  h2 {
+    font-size: 16px; }
+
+  h4 {
+    font-size: 14px; }
+
+  .front-page-top-text {
+    font-size: 14px;
+    padding-top: 0;
+    margin-top: 10px; }
+
+  .rectangle-white-text-bottom h4 {
+    font-size: 10px;
+    margin-top: 56px; }
+
+  .rectangle-blue {
+    height: 45px; }
+
+  .rectangle-blue:before, .rectangle-blue:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -0.4em;
+    border: 1.5em solid #33346E;
+    z-index: -1; }
+
+  .rectangle-blue:before {
+    left: -4em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+    width: 20px; }
+
+  .rectangle-blue:after {
+    right: -4em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+    width: 20px; }
+
+  .rectangle-blue .rectangle-blue-content:before, .rectangle-blue .rectangle-yellow-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #33346E transparent transparent transparent;
+    bottom: -1em; }
+
+  .rectangle-white {
+    height: 200px;
+    min-height: 200px; }
+
+  .rectangle-yellow {
+    height: 40px;
+    margin-top: 30px; }
+
+  .rectangle-yellow h4 {
+    padding-top: 2px; }
+
+  .rectangle-yellow:before, .rectangle-yellow:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -0.2em;
+    border: 1.3em solid #F7931E;
+    z-index: -1; }
+
+  .rectangle-yellow:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent; }
+
+  .rectangle-yellow:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent; }
+
+  .rectangle-yellow .rectangle-yellow-content:before, .rectangle-yellow .rectangle-yellow-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #FBB03B transparent transparent transparent;
+    bottom: -1em; } }
+/*===================================*/
+/*=====Another media querie*/
+/*===================================*/
+@media (max-width: 320px) {
+  h2 {
+    font-size: 14px; }
+
+  .front-page-top-text {
+    padding-top: 20px; }
+
+  .rectangle-white-text-bottom h4 {
+    font-size: 12px; }
+
+  .rectangle-white-text-bottom {
+    margin-top: 70px; }
+
+  .rectangle-blue {
+    width: 60%; }
+
+  .rectangle-blue h2 {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .rectangle-blue:before, .rectangle-blue:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -0.4em;
+    border: 1.5em solid #33346E;
+    z-index: -1; }
+
+  .rectangle-blue:before {
+    left: -2.8em;
+    border-right-width: 0.8em;
+    border-left-color: transparent;
+    width: 20px; }
+
+  .rectangle-blue:after {
+    right: -2.8em;
+    border-left-width: 0.8em;
+    border-right-color: transparent;
+    width: 20px; }
+
+  .rectangle-blue .rectangle-blue-content:before, .rectangle-blue .rectangle-yellow-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #33346E transparent transparent transparent;
+    bottom: -1em; }
+
+  .rectangle-white {
+    width: 70%;
+    height: 250px; }
+
+  .rectangle-yellow {
+    margin-top: 40px; }
+
+  .cart-summary {
+    background-size: 49px 50px;
+    background-repeat: no-repeat; } }
+/*===================================*/
+/*=====custom media queries...*/
+/*===================================*/
+@media (min-width: 1024px) {
+  [class*="col-"] {
+    padding: 15px; } }
+@media (max-width: 1024px) {
+  .products, .products h4, .products p {
+    text-align: center; }
+
+  .products input[type=submit] {
+    max-width: 110px; } }
+
+/*# sourceMappingURL=style.css.map */

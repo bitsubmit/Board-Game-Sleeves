@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "SleeveFitter";
+}
+
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="~/Content/slider.css">
+    <div id='firstStep'>
+        <h2>First we need to calibrate</h2>
+        <p>Put your credit card to the box and adjust the scale</p>
+        <input id='scale' value="Set scale!">
+    </div>
+
+    <div id="secondStep">
+        <h2>We now know the size of your screen</h2>
+        <p>Now get your gamecard! <br>The fun part starts now!</p>
+    </div>
+
+    <input id='reset' style="display: none" value="Reset the scale">
+    <div id="sliderWidth" class="slider"></div>
+    <div id="area"></div>
+    <div id="sleeves" style="display:none">
+        <p>Hold your card to the sleeve to find a match!</p>
+    </div>
+
+
+
+    <script src="~/Content/scripts/slider.js"></script>
+

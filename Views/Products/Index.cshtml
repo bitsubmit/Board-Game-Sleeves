@@ -1,0 +1,26 @@
+﻿@model Board_game_sleeves.ViewModel.ProductListViewModel
+@using Board_game_sleeves.Models
+
+@{
+    ViewBag.Title = "Index";
+}
+@foreach (Product i in Model.Products)
+{
+    <div class="products col-3">
+        <img src="content/@i.ImageURL" />
+        <h4>@i.Name</h4>  
+        <p>@i.ProductDescription @i.Material</p>
+        <h4 class="price-tag">@i.Price kr.</h4>
+        @using (Html.BeginForm("AddToCart", "Cart"))
+        {
+            @Html.Hidden("productId", @i.ProductId);
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery);
+            <input type="submit" class="btn btn-success" value="Add to cart" />
+        }
+        <br /><br /><br />
+    </div>
+
+
+}
+
+
